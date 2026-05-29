@@ -82,6 +82,50 @@ export OF_SKIP_MULTIUSER_SCREEN=1
 export OF_DISABLE_DM_VERITY=1
 export OF_DISABLE_FORCED_ENCRYPTION=1
 
+# GNU Utilities
+export FOX_USE_SED_BINARY=1                 # GNU sed binary (~200kb)
+export FOX_USE_GREP_BINARY=1                # GNU grep binary (more powerful than toybox)
+export FOX_USE_DATE_BINARY=1                # GNU date binary (~80kb for arm64)
+
+# Compression Tools
+export FOX_USE_LZ4_BINARY=1                 # LZ4 compression binary
+export FOX_USE_ZSTD_BINARY=1                # Zstandard compression binary
+export FOX_USE_XZ_UTILS=1                   # XZ Utils (lzma, xz) - ~260kb
+export OF_USE_LZMA_COMPRESSION=0            # LZMA compression (slow but good)
+export OF_USE_LZ4_COMPRESSION=0             # LZ4 ramdisk compression
+
+# Additional Utilities
+export FOX_USE_BUSYBOX_BINARY=1             # Standalone busybox binary (ARM64)
+export FOX_REMOVE_BUSYBOX_BINARY=0          # Keep busybox
+export FOX_REMOVE_ZIP_BINARY=0              # Keep zip binary
+export FOX_REMOVE_AAPT=0                    # Keep aapt binary
+export FOX_DELETE_INITD_ADDON=0             # Keep initd addon
+export FOX_DELETE_MAGISK_ADDON=0            # Keep magisk addon
+
+# Shell Configuration
+export FOX_REMOVE_BASH=0                    # Keep bash shell
+export FOX_USE_BASH_SHELL=1                 # Bash as default shell
+export FOX_ASH_IS_BASH=1                    # Also available as ash
+export FOX_BASH_TO_SYSTEM_BIN=0             # Keep bash in /sbin/
+
+# Editor Configuration
+export FOX_EXCLUDE_NANO_EDITOR=0            # Keep nano editor
+export FOX_BUILD_BASH=0                     # Don't rebuild bash from source
+
+# Advanced Features
+export FOX_REPLACE_TOOLBOX_GETPROP=1        # Use resetprop instead of toolbox getprop
+export FOX_USE_UPDATED_MAGISKBOOT=0         # Use current magiskboot version
+
+# Filesystem & Tools
+export FOX_USE_FSCK_EROFS_BINARY=1          # fsck.erofs binary for EROFS support
+export FOX_USE_PATCHELF_BINARY=1            # patchelf binary (helpful utility)
+export FOX_USE_DMSETUP=1                    # dmsetup for partition formatting
+export OF_USE_DMCTL=1                       # dmctl as alternative
+
+# Size Optimization (conflictual with some tools, kept minimal)
+export FOX_DRASTIC_SIZE_REDUCTION=0         # Disabled to keep all tools
+export FOX_EXTREME_SIZE_REDUCTION=0         # Disabled
+
 # ===== R11+ SETTINGS =====
 export FOX_ENABLE_APP_MANAGER=0
 export OF_USE_TWRP_SAR_DETECT=1
@@ -117,3 +161,4 @@ export CCACHE_EXEC=/usr/bin/ccache
 
 # ===== LOCALE =====
 export LC_ALL="C"
+
