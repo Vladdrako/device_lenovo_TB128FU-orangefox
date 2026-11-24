@@ -34,9 +34,19 @@ import /system/etc/init/keystore2.rc
 # add mtp and mass_storage support
 import /init.tb128fu_usb.rc
 
+on early-init
+    mkdir /tmp/misc 0755 root root
+    mkdir /tmp/misc/keystore 0700 root root
+    setprop keymaster_ver 4.1
+
 on init
+    setprop prepdecrypt.setpatch true
+    setprop prepdecrypt.loglevel 2
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
+    mkdir /tmp/misc 0755 root root
+    mkdir /tmp/misc/keystore 0700 root root
+    setprop keymaster_ver 4.1
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -45,6 +55,10 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-4-1-qti
+    start gatekeeper-1-0-qti
 
 ## fastbootd requires health-hal and boot-hal
 on boot

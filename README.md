@@ -2,13 +2,7 @@
 ![Lenovo Tab M10 Plus Gen 3](https://p4-ofp.static.pub/fes/cms/2022/02/10/mzr7bhnqxvv3n35809y8blhsklcjpj515071.png "Lenovo Smart Tab M10 Plus Gen 3 (TB-128FU)")
 
 ## Release info
-⚠️ **BETA RELEASE - Use with caution!**
-
 This is an unofficial OrangeFox Recovery build. Install at your own risk.
-
-**IMPORTANT:** Backup your files with another tool (not OrangeFox) before using in case things go wrong.
-
-**⚠️ REQUIREMENT:** Your phone must have an **unlocked bootloader** for this to work.
 
 There are five flavours of this tablet. This OrangeFox Recovery will not work on all of them.
 
@@ -43,10 +37,10 @@ USB          | USB-C 2.0 (charging/storage/OTG)
 Release Date | October 2022 (India)
 
 
+
 ## Credits
 - Maintainer: [aless1bp](https://github.com/aless1bp)
 - Based on TWRP device tree by Royna
-- Configuration references from [TB320FC by NeutroGe](https://github.com/NeutroGe/android_device_lenovo_TB320FC)
 - OrangeFox Recovery by [OrangeFox Team](https://gitlab.com/OrangeFox)
 
 ## Support

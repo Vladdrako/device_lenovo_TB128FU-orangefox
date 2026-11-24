@@ -20,7 +20,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/fox_TB128FU.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_TB128FU-userdebug \
-    twrp_TB128FU-eng \
-    fox_TB128FU-eng
+    twrp_TB128FU-ap2a-eng \
+    twrp_TB128FU-ap2a-userdebug \
+    fox_TB128FU-ap2a-eng \
+    fox_TB128FU-ap2a-userdebug
 
